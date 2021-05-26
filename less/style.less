@@ -1,11 +1,27 @@
+/* 
+Template Name: Md. Abdur Rahman  
+Author Email: freelancerrahman0@gmail.com 
+Version: 1.00 
+*/
+
 /*table of content 
     1. variable 
     2. mixing 
     3. common css
-    4. banner css
-    5. navbar css
-    6. portfolio css
+    4. preloader css
+    5. banner css   
+    6. navbar css
+    7. portfolio css
+    8. about css
+    9. rail css
+    10. team css
+    11. service css
+    12. blog css
+    13. footer css
+    14. link css
+    15. btt css
 */
+
 /*variable  ends here*/
 
 @f: 'Roboto', sans-serif;
@@ -20,6 +36,7 @@
 }
 
 /*mixing ends here*/
+
 * {
     margin: 0;
     padding: 0;
@@ -40,6 +57,65 @@ img {
 }
 
 /*common css ends here*/
+
+/*preloader css starts here*/
+.preloader {
+    width: 100%;
+    height: 100vh;
+    background: #177bbb;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99999999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .loader {
+        h4 {
+            font-family: @f;
+            font-weight: 400;
+            font-size: 30px;
+            color: #fff;
+            text-transform: uppercase;
+
+            span {
+                width: 20px;
+                height: 20px;
+                background: #fff;
+                border-radius: 50%;
+                display: inline-block;
+                animation: slideleft 2s infinite;
+                opacity: 0;
+
+                &:nth-child(1) {
+                    animation-delay: .2s;
+                }
+
+                &:nth-child(2) {
+                    animation-delay: .4s;
+                }
+
+                &:nth-child(3) {
+                    animation-delay: .6s;
+                }
+            }
+        }
+    }
+}
+
+@keyframes slideleft {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/*preloader css ends here*/
 
 /*banner starts here*/
 #banner {
@@ -76,12 +152,13 @@ img {
 
 /*navbar starts here*/
 #navbar {
-    background: #177bbb ;
+    background: #177bbb;
     padding-top: 10px;
     padding-bottom: 10px;
     width: 100%;
-    position: absolute;
+    position: fixed;
     z-index: 999999;
+
     .navbar {
         .navbar-collapse {
             .navbar-nav {
@@ -114,48 +191,52 @@ img {
         }
     }
 }
+
 .stiky {
     background: #177bbb;
-    // animation: smoth 5s linear;
-    position: fixed;
-    top: 800px;
-    left: 0;
-    z-index: 99999999;
+    animation: smoth 2s linear forwards;
 }
 
-// @keyframes smoth {
-//     0% {
-//         bottom: 0;
-//     }
-//     100%{
-//         top: 0;
-//     }
-// }
+@keyframes smoth {
+    0% {
+        bottom: 0%;
+    }
+
+    100% {
+        bottom: 85%;
+    }
+}
+
 /*navbar css ends here*/
 
 /*portfolio starts here*/
-#port{
+#port {
     padding-top: 100px;
     padding-bottom: 100px;
-    .port-head{
+
+    .port-head {
         font-family: @f;
         font-size: 22px;
         font-weight: 400;
         color: #000;
         letter-spacing: 2px;
         margin-bottom: 100px;
-        .head-span{
+
+        .head-span {
             color: #177bbb;
         }
     }
-    .main{
+
+    .main {
         margin: auto;
+
         &:hover i {
             background: #177bbb;
             border-color: #177bbb;
             color: #fff;
         }
-        i{
+
+        i {
             width: 100px;
             height: 100px;
             border: 1px solid #000;
@@ -165,16 +246,18 @@ img {
             font-size: 25px;
             margin-bottom: 45px;
             .tr(.4s);
-            
+
         }
-        .stext{
+
+        .stext {
             font-family: @f;
             font-size: 20px;
             font-weight: 400;
             color: #000;
             text-transform: capitalize;
         }
-        .ptext{
+
+        .ptext {
             font-family: @f;
             font-size: 14px;
             font-weight: 400;
@@ -183,14 +266,16 @@ img {
         }
     }
 }
+
 /*portfolio ends here*/
 
 /*about css starts here*/
-#about{
+#about {
     background: #9fc8e3;
     padding-top: 100px;
-    .work{
-        .heading{
+
+    .work {
+        .heading {
             font-family: @f;
             font-size: 24px;
             font-weight: 400;
@@ -198,7 +283,8 @@ img {
             margin-bottom: 20px;
             text-transform: uppercase;
         }
-        .pera{
+
+        .pera {
             font-family: @f;
             font-size: 16px;
             font-weight: 400;
@@ -207,7 +293,8 @@ img {
             padding: 0px 270px;
             margin-bottom: 50px;
         }
-        .story-link{
+
+        .story-link {
             font-family: @f;
             font-size: 14px;
             font-weight: 400;
@@ -217,12 +304,14 @@ img {
             padding: 15px;
             border-radius: 5px;
             .tr(.4s);
-            &:hover{
+
+            &:hover {
                 background: #fff;
                 color: #177bbb;
             }
         }
-        .img{
+
+        .img {
             margin-top: 70px;
         }
     }
@@ -231,39 +320,44 @@ img {
 /*about css ends here*/
 
 /*rail css starts here*/
-#rail{
+#rail {
     background: url(../images/rail.jpg) no-repeat center / cover;
     padding-top: 100px;
     padding-bottom: 100px;
     position: relative;
     z-index: 1;
-    .slick-dots{
+
+    .slick-dots {
         display: flex;
         position: absolute;
         left: 50%;
         bottom: -65px;
         transform: translateX(-50%);
         cursor: pointer;
-        .slick-active{
+
+        .slick-active {
             background: #177bbb;
             width: 16px;
             height: 16px;
         }
-        li{
+
+        li {
             width: 16px;
             height: 16px;
             background: #fff;
             border-radius: 50%;
             margin: 0 5px;
             .tr(.4s);
-            button{
+
+            button {
                 font-size: 0;
                 border: none;
                 background: none;
             }
         }
     }
-    &::after{
+
+    &::after {
         content: '';
         width: 100%;
         height: 100%;
@@ -273,7 +367,8 @@ img {
         left: 0;
         z-index: -1;
     }
-    i{
+
+    i {
         width: 60px;
         height: 60px;
         background: #fff;
@@ -284,34 +379,40 @@ img {
         margin-bottom: 45px;
         cursor: pointer;
     }
-    .rail-head{
+
+    .rail-head {
         font-family: @f;
         font-size: 20px;
         font-weight: 400;
         color: #fff;
         margin-bottom: 20px;
     }
-    .rail-p{
+
+    .rail-p {
         font-family: @f;
         font-size: 16px;
         font-weight: 400;
         color: #177bbb;
         text-transform: capitalize;
-        span{
+
+        span {
             margin-left: 20px;
         }
     }
 
 }
+
 /*rail css ends here*/
 
 /*team css starts here*/
-#team{
+#team {
     padding-top: 100px;
     padding-bottom: 100px;
-    .heading{
+
+    .heading {
         margin-bottom: 50px;
-        .team-head{
+
+        .team-head {
             font-family: @f;
             font-size: 24px;
             font-weight: 400;
@@ -319,7 +420,8 @@ img {
             text-transform: uppercase;
             margin-bottom: 20px;
         }
-        .team-pera{
+
+        .team-pera {
             font-family: @f;
             font-size: 16px;
             font-weight: 400;
@@ -327,14 +429,17 @@ img {
             text-transform: capitalize;
         }
     }
-    .team-item{
+
+    .team-item {
         margin: auto;
-        .team-img{
+
+        .team-img {
             position: relative;
             width: 175px;
             height: 175px;
             margin-bottom: 30px;
-            .team-over{
+
+            .team-over {
                 width: 100%;
                 height: 100%;
                 background: rgba(23, 124, 187, 0.664);
@@ -344,12 +449,14 @@ img {
                 border-radius: 50%;
                 opacity: 0;
                 .tr(.4s);
-                .team-icon{
-                    ul{
+
+                .team-icon {
+                    ul {
                         display: flex;
                         line-height: 175px;
-                        li{
-                            a{
+
+                        li {
+                            a {
                                 padding: 10px;
                                 background: #fff;
                                 color: #177bbb;
@@ -361,18 +468,21 @@ img {
                 }
             }
         }
-        &:hover .team-over{
+
+        &:hover .team-over {
             opacity: 1;
         }
-        .team-name{
-            .name{
+
+        .team-name {
+            .name {
                 font-family: @f;
                 font-weight: 400;
                 font-size: 16px;
                 color: #000;
                 text-transform: uppercase;
             }
-            .team-p{
+
+            .team-p {
                 font-family: @f;
                 font-weight: 400;
                 font-size: 14px;
@@ -383,16 +493,18 @@ img {
         }
     }
 }
+
 /*team css ends here*/
 
 /*service css starts here*/
-#service{
+#service {
     background: url(../images/service-bg.jpg) no-repeat center / cover;
     padding-top: 100px;
     padding-bottom: 100px;
     position: relative;
     z-index: 1;
-    &::after{
+
+    &::after {
         content: '';
         width: 100%;
         height: 100%;
@@ -402,16 +514,19 @@ img {
         left: 0;
         z-index: -1;
     }
-    .service-head{
+
+    .service-head {
         margin-bottom: 30px;
-        h4{
+
+        h4 {
             font-family: @f;
             font-size: 24px;
             font-weight: 400;
             color: #fff;
             text-transform: uppercase;
         }
-        p{
+
+        p {
             font-family: @f;
             font-size: 16px;
             font-weight: 400;
@@ -419,22 +534,27 @@ img {
             text-transform: capitalize;
         }
     }
-    .service-item{
-        .service-icon{
-            .heart{
+
+    .service-item {
+        .service-icon {
+            .heart {
                 font-size: 25px;
             }
-            .css3{
+
+            .css3 {
                 background: #6fb554;
             }
-            .html5{
+
+            .html5 {
                 background: #f35f3d;
                 font-size: 35px;
             }
-            .mobile{
+
+            .mobile {
                 background: #2355a8;
             }
-            i{
+
+            i {
                 width: 60px;
                 height: 60px;
                 background: #ea2e49;
@@ -446,9 +566,11 @@ img {
                 margin-top: 5px;
             }
         }
-        .service-text{
+
+        .service-text {
             margin-bottom: 30px;
-            h4{
+
+            h4 {
                 font-family: @f;
                 font-size: 18px;
                 font-weight: 400;
@@ -456,27 +578,31 @@ img {
                 text-transform: uppercase;
                 margin-bottom: 20px;
             }
-            p{
+
+            p {
                 font-family: @f;
                 font-size: 16px;
                 font-weight: 400;
                 color: rgba(255, 255, 255, 0.5);
                 text-transform: capitalize;
-                
+
             }
         }
     }
 }
+
 /*service css ends here*/
 
 /*blog css starts here*/
-#blog{
+#blog {
     background: #323232;
     padding-top: 100px;
     padding-bottom: 100px;
-    .blog-head{
+
+    .blog-head {
         margin-bottom: 45px;
-        h4{
+
+        h4 {
             font-family: @f;
             font-size: 24px;
             font-weight: 400;
@@ -484,11 +610,14 @@ img {
             text-transform: uppercase;
         }
     }
-    .blog-item{
+
+    .blog-item {
         margin-bottom: 20px;
-        .blog-img{
+
+        .blog-img {
             position: relative;
-            .overlay{
+
+            .overlay {
                 width: 100%;
                 height: 25%;
                 background: rgba(23, 124, 187, 0.7);
@@ -497,13 +626,15 @@ img {
                 left: 0;
                 opacity: 0;
                 .tr(.5s);
-                
+
             }
-            &:hover .overlay{
+
+            &:hover .overlay {
                 bottom: 0;
                 opacity: 1;
             }
-            .over-1{
+
+            .over-1 {
                 font-family: @f;
                 font-weight: 400;
                 font-size: 16px;
@@ -511,7 +642,8 @@ img {
                 text-transform: uppercase;
                 line-height: 50px;
             }
-            .over-2{
+
+            .over-2 {
                 font-family: @f;
                 font-weight: 400;
                 font-size: 16px;
@@ -521,15 +653,17 @@ img {
             }
         }
     }
-    .blog-text{
-        h5{
+
+    .blog-text {
+        h5 {
             font-family: @f;
             font-weight: 400;
-            font-family: 18px;
+            font-size: 22px;
             color: #fff;
             text-transform: capitalize;
         }
-        p{
+
+        p {
             font-family: @f;
             font-weight: 400;
             font-size: 14px;
@@ -538,49 +672,15 @@ img {
         }
     }
 }
+
 /*blog css ends here*/
 
 /*footer css starts here*/
-#contact{
+#contact {
     padding-top: 100px;
     padding-bottom: 100px;
-    .contact-us{
-        h4{
-            font-family: @f;
-            font-weight: 400;
-            font-size: 24px;
-            color: #000;
-            text-transform: capitalize;
-            margin-bottom: 40px;
-        }
-        p{
-            font-family: @f;
-            font-weight: 400;
-            font-size: 15px;
-            color: #666;
-            text-transform: capitalize;
-            margin-bottom: 35px;
-        }
-        .icon{
-            ul{
-                li{
-                    margin-bottom: 30px;
-                    a{
-                        font-family: @f;
-                        font-weight: 400;
-                        font-size: 15px;
-                        color: #177bbb;
-                        text-transform: capitalize;
-                        i{
-                            font-size: 20px;
-                            margin-right: 25px;
-                        }
-                    }
-                }
-            }
-        }
-    }
-    .send{
+
+    .contact-us {
         h4 {
             font-family: @f;
             font-weight: 400;
@@ -589,7 +689,49 @@ img {
             text-transform: capitalize;
             margin-bottom: 40px;
         }
-        input{
+
+        p {
+            font-family: @f;
+            font-weight: 400;
+            font-size: 15px;
+            color: #666;
+            text-transform: capitalize;
+            margin-bottom: 35px;
+        }
+
+        .icon {
+            ul {
+                li {
+                    margin-bottom: 30px;
+
+                    a {
+                        font-family: @f;
+                        font-weight: 400;
+                        font-size: 15px;
+                        color: #177bbb;
+                        text-transform: capitalize;
+
+                        i {
+                            font-size: 20px;
+                            margin-right: 25px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .send {
+        h4 {
+            font-family: @f;
+            font-weight: 400;
+            font-size: 24px;
+            color: #000;
+            text-transform: capitalize;
+            margin-bottom: 40px;
+        }
+
+        input {
             width: 100%;
             height: 50px;
             outline: none;
@@ -598,54 +740,61 @@ img {
             background: none;
             border: 1px solid #177bbb;
             margin-bottom: 30px;
-            &::placeholder{
+
+            &::placeholder {
                 font-family: @f;
                 font-weight: 400;
                 font-size: 15px;
                 color: #177bbb;
                 text-transform: capitalize;
             }
-            }
-            textarea {
-                width: 100%;
-                height: 120px;
-                border: 1px solid #177cba;
-                font-family: roboto_reg;
-                font-size: 15px;
-                color: #177bbb;
-                text-transform: capitalize;
-                padding-left: 20px;
-                padding-top: 20px;
-                box-sizing: border-box;
-                resize: none;
-                outline: none;
-                margin-bottom: 20px;
-            }
-            a{
-                text-align: center;
-                display: block;
-                background: #323232;
-                padding: 10px 0;
-                i{
-                    font-size: 25px;
-                    color: #fff;
-                }
-            }
-            
         }
+
+        textarea {
+            width: 100%;
+            height: 120px;
+            border: 1px solid #177cba;
+            font-family: roboto_reg;
+            font-size: 15px;
+            color: #177bbb;
+            text-transform: capitalize;
+            padding-left: 20px;
+            padding-top: 20px;
+            box-sizing: border-box;
+            resize: none;
+            outline: none;
+            margin-bottom: 20px;
+        }
+
+        a {
+            text-align: center;
+            display: block;
+            background: #323232;
+            padding: 10px 0;
+
+            i {
+                font-size: 25px;
+                color: #fff;
+            }
+        }
+
     }
+}
+
 /*footer css ends here*/
 
 /*link css ends here*/
-#link{
+#link {
     background: #323232;
     padding-top: 50px;
     padding-bottom: 50px;
-    .all-link{
+
+    .all-link {
         text-align: center;
         margin-bottom: 30px;
-        a{
-            i{
+
+        a {
+            i {
                 width: 80px;
                 height: 80px;
                 background: #000;
@@ -659,8 +808,9 @@ img {
             }
         }
     }
-    .copy{
-        h5{
+
+    .copy {
+        h5 {
             font-family: @f;
             font-weight: 400;
             font-size: 15px;
@@ -670,6 +820,7 @@ img {
         }
     }
 }
+
 /*link css ends here*/
 
 /*btn css starts here*/
@@ -685,6 +836,7 @@ img {
     bottom: 60px;
     z-index: 9999;
     animation: down 3s linear;
+
     i {
         font-size: 20px;
         width: 50px;
@@ -707,5 +859,3 @@ img {
 }
 
 /*btn css end here*/
-/*btn css ends here*/
-

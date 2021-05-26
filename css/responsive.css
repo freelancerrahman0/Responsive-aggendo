@@ -1,0 +1,345 @@
+/*table
+    1. extra small device
+    2. small device
+    3. medium device
+    4. large device
+*/
+
+/* extra small device */
+
+@media(max-width:575px) {
+    #banner {
+        padding-top: 230px;
+        padding-bottom: 230px;
+    }
+    #banner .banner .banner-text {
+        font-size: 30px;
+    }
+    .stiky {
+        background: #177bbb;
+        animation: smoth 2s linear forwards;
+    }
+
+    @keyframes smoth {
+        0% {
+            top: 85%;
+        }
+
+        100% {
+            top: 5%;
+        }
+    }
+    .navbar-light .navbar-toggler {
+        color: #fff;
+        font-size: 20px;
+    }
+    #port {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    #port .port-head {
+        margin-bottom: 25px;
+    }
+    #port .main i {
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+        font-size: 22px;
+    }
+    #port .main .ptext {
+        width: inherit;
+    }
+    #about {
+        padding-top: 50px;
+    }
+    #about .work .pera {
+        padding: 0;
+    }
+    #team {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    #team .team-item .team-img {
+        width: 140px;
+        height: 140px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    #team .team-item .team-img .team-over .team-icon ul {
+        line-height: 150px;
+    }
+    #team .team-item .team-img .team-over .team-icon ul li a {
+        padding: 5px;
+    }
+    #service {
+        padding-top: 60px;
+        padding-bottom: 30px;
+    }
+    #service .service-item .service-icon {
+        text-align: center;
+    }
+    #blog {
+        padding-top: 60px;
+        padding-bottom: 30px;
+    }
+    #blog .blog-item .blog-img {
+        margin-bottom: 20px;
+    }
+    #blog .blog-text {
+        margin-bottom: 20px;
+    }
+    #contact {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    #link .all-link a i {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 18px;
+        margin: 0 10px;
+    }
+    .btt {
+        width: 40px;
+        height: 40px;
+        right: 30px;
+        bottom: 50px;
+    }
+    .btt i {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+    }
+}
+
+
+
+
+/* small device */
+
+@media(min-width:576px) and (max-width:767px) {
+    #banner {
+        padding-top: 250px;
+        padding-bottom: 250px;
+    }
+    #banner .banner .banner-text {
+        font-size: 50px;
+    }
+    .stiky {
+        background: #177bbb;
+        animation: smoth 2s linear forwards;
+    }
+
+    @keyframes smoth {
+        0% {
+            top: 90%;
+        }
+
+        100% {
+            top: 5%;
+        }
+    }
+
+    .navbar-light .navbar-toggler {
+        color: #fff;
+        font-size: 20px;
+    }
+    #port {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    #port .main i {
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+        font-size: 20px;
+    }
+    #port .main .ptext {
+        width: inherit;
+    }
+    #about {
+        padding-top: 70px;
+    }
+    #about .work .pera {
+        padding: 0;
+    }
+    #team {
+        padding-top: 60px;
+        padding-bottom: 40px;
+    }
+    #team .team-item {
+        margin-bottom: 20px;
+    }
+    #team .team-item .team-img {
+        width: 160px;
+        height: 160px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    #service {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    #service .service-item .service-icon {
+        text-align: center;
+    }
+    #blog {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    #contact {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    #contact .contact-us {
+        margin-bottom: 40px;
+    }
+    #link .all-link a i {
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        font-size: 24px;
+    }
+}
+
+
+
+/* medium device */
+
+@media(min-width:768px) and (max-width:991px) {
+    #banner {
+        padding-top: 240px;
+        padding-bottom: 240px;
+    }
+    #banner .banner .banner-text {
+        font-size: 50px;
+    }
+    .stiky {
+        background: #177bbb;
+        animation: smoth 2s linear forwards;
+    }
+
+    @keyframes smoth {
+        0% {
+            top: 90%;
+        }
+
+        100% {
+            top: 5%;
+        }
+    }
+    .navbar-light .navbar-toggler {
+        color: #fff;
+        font-size: 20px;
+    }
+    #port .main {
+        margin: auto;
+        padding: 0;
+    }
+    #port .main i {
+        width: 75px;
+        height: 75px;
+        line-height: 75px;
+    }
+    #port .main .stext {
+        font-size: 18px;
+    }
+    #port .main .ptext {
+        width: 180px;
+    }
+    #about {
+        padding-top: 75px;
+    }
+    #about .work .pera {
+        padding: 0;
+    }
+    #rail {
+        padding-top: 75px;
+        padding-bottom: 75px;
+    }
+    #team {
+        padding-top: 80px;
+        padding-bottom: 0px;
+    }
+    #team .team-item {
+        margin: auto;
+        margin-bottom: 50px;
+    }
+    #team .team-item .team-img {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    #service {
+        padding-top: 70px;
+        padding-bottom: 50px;
+    }
+    #blog {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+    #blog .blog-text h5 {
+        font-size: 20px;
+    }
+    #contact {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+    #link {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    #link .all-link a i {
+        width: 65px;
+        height: 65px;
+        line-height: 65px;
+        font-size: 23px;
+    }
+}
+
+
+
+/* large device */
+
+@media(min-width:992px) and (max-width:1199px) {
+
+    #banner {
+        padding-top: 300px;
+        padding-bottom: 300px;
+    }
+
+    #banner .banner .banner-text {
+        font-size: 50px;
+    }
+
+    .stiky {
+        background: #177bbb;
+        animation: smoth 2s linear forwards;
+    }
+
+    @keyframes smoth {
+        0% {
+            bottom: 0%;
+        }
+
+        100% {
+            bottom: 85%;
+        }
+    }
+
+    #port .port-head {
+        letter-spacing: 0;
+    }
+
+    #service {
+        padding-top: 90px;
+        padding-bottom: 90px;
+    }
+
+    #link .all-link a i {
+        width: 70px;
+        height: 70px;
+        line-height: 70px;
+        font-size: 25px;
+    }
+
+}

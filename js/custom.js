@@ -4,6 +4,9 @@ $(function () {
     $('.navber .nav-item').on('click', function () {
         $(this).addClass('active').siblings().removeClass('active');
     });
+    $(window).on('load', function () {
+        $('.preloader').delay(1000).fadeOut(2000);
+    });
 
     // navbar js ends here
 
@@ -23,12 +26,12 @@ $(function () {
 
     $(window).on('scroll', function () {
         var scrolling = $(this).scrollTop();
-        // if (scrolling > 300) {
-        //     btt.slideDown();
-        // } else {
-        //     btt.slideUp();
-        // }
-        if (scrolling > 800) {
+        if (scrolling > 300) {
+            btt.slideDown();
+        } else {
+            btt.slideUp();
+        }
+        if (scrolling > 200) {
             menuBg.addClass('stiky');
         } else {
             menuBg.removeClass('stiky');
